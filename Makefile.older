@@ -1,0 +1,109 @@
+#
+# Gererated Makefile - do not edit!
+#
+# Edit the Makefile in the project folder instead (../Makefile). Each target
+# has a -pre and a -post target defined where you can add customized code.
+#
+# This makefile implements configuration specific macros and targets.
+
+
+# Environment
+MKDIR=mkdir
+CP=cp
+CCADMIN=CCadmin
+RANLIB=ranlib
+CC=gcc
+CCC=g++
+CXX=g++
+FC=
+
+# Include project Makefile
+include Makefile
+
+# Object Directory
+OBJECTDIR=.  
+
+# Object Files
+OBJECTFILES= \
+	RunningState.o \
+	Missile.o \
+	ResourceManager.o \
+	MenuState.o \
+	main.o \
+	BigAsteroid.o \
+	Bullet.o \
+	SmallAsteroid.o \
+	Game.o \
+	Satellite.o \
+	BigAsteroidAnimation.o \
+	SpriteManager.o \
+	CollisionManager.o
+
+# C Compiler Flags
+CFLAGS=
+
+# CC Compiler Flags
+CCFLAGS=-Wall -lSDL -lSDL_image -lSDL_mixer -lSDL_ttf
+CXXFLAGS=-Wall -lSDL -lSDL_image -lSDL_mixer -lSDL_ttf
+
+# Fortran Compiler Flags
+FFLAGS=
+
+# Link Libraries and Options
+LDLIBSOPTIONS=
+
+# Build Targets
+.build-conf: ${BUILD_SUBPROJECTS} xaster
+
+xaster: ${OBJECTFILES}
+	${LINK.cc} -o xaster ${OBJECTFILES} ${LDLIBSOPTIONS} 
+
+RunningState.o: RunningState.cpp 
+	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/RunningState.o RunningState.cpp
+
+Missile.o: Missile.cpp 
+	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/Missile.o Missile.cpp
+
+ResourceManager.o: ResourceManager.cpp 
+	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/ResourceManager.o ResourceManager.cpp
+
+MenuState.o: MenuState.cpp 
+	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/MenuState.o MenuState.cpp
+
+main.o: main.cpp 
+	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/main.o main.cpp
+
+BigAsteroid.o: BigAsteroid.cpp 
+	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/BigAsteroid.o BigAsteroid.cpp
+
+Bullet.o: Bullet.cpp 
+	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/Bullet.o Bullet.cpp
+
+SmallAsteroid.o: SmallAsteroid.cpp 
+	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/SmallAsteroid.o SmallAsteroid.cpp
+
+Game.o: Game.cpp 
+	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/Game.o Game.cpp
+
+Satellite.o: Satellite.cpp 
+	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/Satellite.o Satellite.cpp
+
+BigAsteroidAnimation.o: BigAsteroidAnimation.cpp 
+	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/BigAsteroidAnimation.o BigAsteroidAnimation.cpp
+
+SpriteManager.o: SpriteManager.cpp 
+	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/SpriteManager.o SpriteManager.cpp
+
+CollisionManager.o: CollisionManager.cpp 
+	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/CollisionManager.o CollisionManager.cpp
+
+# Subprojects
+.build-subprojects:
+
+# Clean Targets
+.clean-conf:
+	${RM} -r build/Release
+	${RM} xaster
+
+# Subprojects
+.clean-subprojects:
